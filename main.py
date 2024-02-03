@@ -34,9 +34,17 @@ def connections():
     task2 = Task.objects.get(id=1)
     user2.task.add(task2)
 
+def get_users_from_task():
+    pass
+
+def get_tasks_from_user():
+    pass
+
 
 def main():
     connections()
+    get_users_from_task()
+    get_tasks_from_user()
 
 if __name__ == "__main__":
     main()
