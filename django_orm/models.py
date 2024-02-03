@@ -5,7 +5,7 @@ class User(models.Model):
     login = models.CharField(max_length=63)
     email = models.EmailField(unique=True)
     role = models.CharField(max_length=50, choices=[('AD', 'admin'), ('US', 'user')])
-    task = models.ForeignKey("Task", on_delete=models.DO_NOTHING)
+    task = models.ManyToManyField("Task")
 
     def __str__(self):
         return self.login
@@ -18,4 +18,3 @@ class Task(models.Model):
 
     def __str__(self):
         return self.description
-    
