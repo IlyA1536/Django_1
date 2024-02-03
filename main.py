@@ -24,7 +24,6 @@ def inserts():
     )
     task1.save()
 
-
 def connections():
     user1 = User.objects.get(id=1)
     task1 = Task.objects.get(id=1)
@@ -39,7 +38,6 @@ def get_users_from_task():
 
 def get_tasks_from_user():
     pass
-
 
 def main():
     connections()
